@@ -140,7 +140,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
               (bg-violet `(:background ,violet))
               (bg-blue `(:background ,blue))
               (bg-cyan `(:background ,cyan))
-              
+
               (fg-base03 `(:foreground ,base03))
               (fg-base02 `(:foreground ,base02))
               (fg-base01 `(:foreground ,base01))
@@ -365,6 +365,16 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (jabber-roster-user-offline ((t (,@fg-base01))))
              (jabber-roster-user-online ((t (,@fmt-bold ,@fg-blue))))
              (jabber-roster-user-xa ((t (,@fmt-ital ,@fg-magenta))))
+
+             ;; magit
+             (magit-file-header ((t (,@fg-violet))))
+             (magit-hunk-header ((t (,@fg-blue))))
+             (magit-header ((t (,@fg-cyan))))
+             (magit-tag-label ((t (,@bg-blue ,@fg-orange))))
+             (magit-diff-add ((t (,@fg-blue))))
+             (magit-diff-del ((t (,@fg-red))))
+             (magit-item-highlight ((t (,@bg-base02))))
+
              ;; gnus - these are taken from mutt, not VIM
              (gnus-cite-1 ((t (,@fmt-none ,@fg-blue)))) ; quoted
              (gnus-cite-2 ((t (,@fmt-none ,@fg-cyan)))) ; quoted1
@@ -481,13 +491,13 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (whitespace-trailing ((t (,@fmt-bold ,@fg-red ,@bg-base02))))
              (whitespace-highlight-face ((t (,@fg-red ,@bg-blue))))
              ;; rcirc
-             (rcirc-my-nick ((t (:foreground ,blue))))
-             (rcirc-nick-in-message ((t (:foreground ,orange))))
-             (rcirc-other-nick ((t (:foreground ,green))))
-             (rcirc-prompt ((t (:foreground ,yellow))))
-             (rcirc-bright-nick ((t (:foreground ,magenta))))
-             (rcirc-server ((t (:foreground ,base1))))
-             (rcirc-timestamp ((t (:foreground ,base01)))))
+             (rcirc-my-nick ((t (,@fg-blue))))
+             (rcirc-nick-in-message ((t (,@fg-orange))))
+             (rcirc-other-nick ((t (,@fg-green))))
+             (rcirc-prompt ((t (,@fg-yellow))))
+             (rcirc-bright-nick ((t (,@fg-magenta))))
+             (rcirc-server ((t (,@fg-base1))))
+             (rcirc-timestamp ((t (,@fg-base01)))))
 
             ((foreground-color . ,(when (<= 16 (display-color-cells)) base0))
              (background-color . ,back)
