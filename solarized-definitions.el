@@ -321,6 +321,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (org-started-kwd-face ((t (,@fg-yellow ,@bg-base03))))
              (org-cancelled-kwd-face ((t (,@fg-green ,@bg-base03))))
              (org-delegated-kwd-face ((t (,@fg-cyan ,@bg-base03))))
+             ;; table
+             (table-cell ((t (,@fmt-none ,@fg-base0 ,@bg-back))))
              ;; outline - pandocBlockQuoteLeader*
              (outline-1 ((t (,@fmt-none ,@fg-blue))))
              (outline-2 ((t (,@fmt-none ,@fg-cyan))))
@@ -330,6 +332,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (outline-6 ((t (,@fmt-none ,@fg-base01))))
              (outline-7 ((t (,@fmt-none ,@fg-orange))))
              (outline-8 ((t (,@fmt-none ,@fg-violet))))
+             ;; speedbar
+             (speedbar-button-face ((t (,@fmt-none ,@fg-base1))))
+             (speedbar-directory-face ((t (,@fmt-none ,@fg-orange))))
+             (speedbar-file-face ((t (,@fmt-none ,@fg-green))))
+             (speedbar-highlight-face ((t (,@bg-base02))))
+             (speedbar-selected-face ((t (,@fmt-undr ,@fg-yellow))))
+             (speedbar-separator-face ((t (,@fmt-stnd))))
+             (speedbar-tag-face ((t (,@fmt-none ,@fg-blue))))
              ;; show-paren - MatchParen
              (show-paren-match ((t (,@fmt-bold ,@fg-cyan ,@bg-base02))))
              (show-paren-mismatch ((t (,@fmt-bold ,@fg-red ,@bg-base01))))
@@ -490,14 +500,21 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (whitespace-tab ((t (,@fg-base02))))
              (whitespace-trailing ((t (,@fmt-bold ,@fg-red ,@bg-base02))))
              (whitespace-highlight-face ((t (,@fg-red ,@bg-blue))))
+             (whitespace-line ((t (,@fg-magenta ,@bg-base03))))
              ;; rcirc
-             (rcirc-my-nick ((t (,@fg-blue))))
-             (rcirc-nick-in-message ((t (,@fg-orange))))
-             (rcirc-other-nick ((t (,@fg-green))))
-             (rcirc-prompt ((t (,@fg-yellow))))
-             (rcirc-bright-nick ((t (,@fg-magenta))))
-             (rcirc-server ((t (,@fg-base1))))
-             (rcirc-timestamp ((t (,@fg-base01)))))
+             (rcirc-my-nick ((t (:foreground ,blue))))
+             (rcirc-nick-in-message ((t (:foreground ,orange))))
+             (rcirc-other-nick ((t (:foreground ,green))))
+             (rcirc-prompt ((t (:foreground ,yellow))))
+             (rcirc-bright-nick ((t (:foreground ,magenta))))
+             (rcirc-server ((t (:foreground ,base1))))
+             (rcirc-timestamp ((t (:foreground ,base01))))
+             ;;font-latex
+             (font-latex-warning-face ((t (,@fg-red))))
+             (font-latex-sectioning-5-face ((t (,@fg-violet))))
+             ;;flyspell
+             (flyspell-incorrect ((t (,@fg-red))))
+             (flyspell-duplicate ((t (,@fg-yellow)))))
 
             ((foreground-color . ,(when (<= 16 (display-color-cells)) base0))
              (background-color . ,back)
